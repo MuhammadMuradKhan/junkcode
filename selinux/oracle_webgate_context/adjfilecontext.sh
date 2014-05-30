@@ -24,3 +24,5 @@
 
 /sbin/restorecon -Rv /opt/netpoint/webgate >/dev/null 2>&1 || :
 
+/sbin/restorecon -Rv /etc/httpd >/dev/null 2>&1 || :
+
