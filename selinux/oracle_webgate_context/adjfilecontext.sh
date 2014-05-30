@@ -21,6 +21,12 @@
 /usr/sbin/semanage fcontext -a -t httpd_sys_script_exec_t "/opt/netpoint/webgate/access/oblix/lang/en-us/securid-cgi(/.*)?" >/dev/null 2>&1 || :
 # auth plugin
 /usr/sbin/semanage fcontext -a -t textrel_shlib_t "/etc/httpd/WLSPlugin11.*(/.*)?/lib/.*\.so"
+# boolean
+
+setsebool -P httpd_execmem 1
+
+setsebool -P httpd_can_network_connect 1
+
 
 
 
