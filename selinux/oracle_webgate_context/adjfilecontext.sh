@@ -1,3 +1,9 @@
+#!/bin/sh
+####################
+# Date: Fri May 30 17:13:48 CEST 2014
+# Version : 1.1
+# Author: Damfino
+# 
 # Fix wrong fs context for Oracle Web Gate
 /usr/sbin/semanage fcontext -a -t httpd_tmp_t "/opt/netpoint/webgate/access(/.*)?"
 /usr/sbin/semanage fcontext -a -t bin_t "/opt/netpoint/webgate(/.*)?bin(/.*)?"
