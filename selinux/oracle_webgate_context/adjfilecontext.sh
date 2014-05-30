@@ -22,7 +22,7 @@
 # conf file
 /usr/sbin/semanage fcontext -a -t httpd_config_t "/opt/netpoint/webgate/access/oblix/config(/.*)?"
 # lock file
-#/usr/sbin/semanage fcontext -a -t httpd_var_run_t "/opt/netpoint/webgate/access/oblix/config/.*\.lck"
+/usr/sbin/semanage fcontext -a -t httpd_var_run_t "/opt/netpoint/webgate/access/oblix/config/.*\.lck"
 # cgi
 /usr/sbin/semanage fcontext -a -t httpd_sys_script_exec_t "/opt/netpoint/webgate/access/oblix/lang/en-us/securid-cgi(/.*)?"
 # auth plugin
