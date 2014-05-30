@@ -1,6 +1,8 @@
 # Fix wrong fs context for Oracle Web Gate
 /usr/sbin/semanage fcontext -a -t httpd_tmp_t "/opt/netpoint/webgate/access(/.*)?" >/dev/null 2>&1 || :
 /usr/sbin/semanage fcontext -a -t bin_t "/opt/netpoint/webgate(/.*)?bin(/.*)?"  >/dev/null 2>&1 || :
+#
+/usr/sbin/semanage fcontext -a -t httpd_var_run_t "/opt/netpoint/webgate/access/oblix/config/random-seed"
 # Text Relocation
 /usr/sbin/semanage fcontext -a -t textrel_shlib_t "/opt/netpoint/webgate/access/_jvmWebGate(/.*)?/.*\.so" >/dev/null 2>&1 || :
 # shared lib
