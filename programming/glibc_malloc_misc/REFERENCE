@@ -1,0 +1,8 @@
+ - Bug 640286 libc per thread allocator in RHEL6: excessive memory usage and leaks
+https://bugzilla.redhat.com/show_bug.cgi?id=640286
+
+ - Should set MALLOC_ARENA_MAX in hadoop-config.sh
+https://issues.apache.org/jira/plugins/servlet/mobile#issue/HADOOP-7154
+
+ - glibc new MALLOC behaviour (RHEL 5.4 Release Notes)
+http://www.centos.org/docs/5/html/5.4/release-notes/Tools.html
