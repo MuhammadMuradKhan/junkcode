@@ -16,7 +16,7 @@
 /usr/sbin/semanage fcontext -a -t textrel_shlib_t "/opt/netpoint/opt/netpoint./webgate/access/oblix/apps/webgate/bin/.+\.so(\.[^/]*)*"
 /usr/sbin/semanage fcontext -a -t textrel_shlib_t "/opt/netpoint/webgate/access/oblix/apps/webgate/bin/.+\.so(\.[^/]*)*"
 # log file
-/usr/sbin/semanage fcontext -a -t httpd_log_t "/opt/netpoint/webgate/access/oblix/logs(/.*)?"
+/usr/sbin/semanage fcontext -a -t httpd_cache_t "/opt/netpoint/webgate/access/oblix/logs(/.*)?"
 # lock file
 /usr/sbin/semanage fcontext -a -t httpd_var_run_t "/opt/netpoint/webgate(/.*)?/.*\.lck"
 # conf file
