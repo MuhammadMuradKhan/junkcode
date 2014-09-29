@@ -1,7 +1,7 @@
 #!/bin/sh
 ####################
-# Date: Fri May 30 17:13:48 CEST 2014
-# Version : 1.1
+# Date: Mon Sep 29 15:47:01 CEST 2014
+# Version : 1.2
 # Author: Damfino
 # 
 # Fix wrong fs context for Oracle Web Gate
@@ -16,7 +16,9 @@
 /usr/sbin/semanage fcontext -a -t textrel_shlib_t "/opt/netpoint/opt/netpoint./webgate/access/oblix/apps/webgate/bin/.+\.so(\.[^/]*)*"
 /usr/sbin/semanage fcontext -a -t textrel_shlib_t "/opt/netpoint/webgate/access/oblix/apps/webgate/bin/.+\.so(\.[^/]*)*"
 # log file
-/usr/sbin/semanage fcontext -a -t httpd_cache_t "/opt/netpoint/webgate/access/oblix/logs(/.*)?"
+/usr/sbin/semanage fcontext -a -t httpd_log_t "/opt/netpoint/webgate/access/oblix/logs(/.*)?"
+# oblix log
+/usr/sbin/semanage fcontext -a -t httpd_cache_t "/opt/netpoint/webgate/access/oblix/logs"
 # lock file
 /usr/sbin/semanage fcontext -a -t httpd_var_run_t "/opt/netpoint/webgate(/.*)?/.*\.lck"
 # conf file
@@ -26,7 +28,7 @@
 # cgi
 /usr/sbin/semanage fcontext -a -t httpd_sys_script_exec_t "/opt/netpoint/webgate/access/oblix/lang/en-us/securid-cgi(/.*)?"
 # auth plugin
-/usr/sbin/semanage fcontext -a -t textrel_shlib_t "/etc/httpd/WLSPlugin11.*(/.*)?/lib/.*\.so(\.[^/]*)*"
+/usr/sbin/semanage fcontext -a -t textrel_shlib_t "/etc/httpd/WLSPlugin1?.*(/.*)?/lib/.*\.so(\.[^/]*)*"
 
 # boolean
 
